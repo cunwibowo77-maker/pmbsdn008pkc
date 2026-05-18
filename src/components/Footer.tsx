@@ -49,7 +49,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-500 shrink-0" />
+<<<<<<< HEAD
                 <span>{settings?.email || 'info@sdn008pklkerinci.sch.id'}</span>
+=======
+                <span>{settings?.email || 'admin@sdn008pkc.sch.id'}</span>
+>>>>>>> a3ab97a (perbaikan halaman awal)
               </li>
             </ul>
           </div>
@@ -57,7 +61,11 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
           <p>&copy; {new Date().getFullYear()} {settings?.namaSekolah || 'SDN 008 PKL KERINCI'}. Hak Cipta Dilindungi.</p>
+<<<<<<< HEAD
           <p className="mt-2 md:mt-0">Sistem PMB Online Terintegrasi</p>
+=======
+          <p className="mt-2 md:mt-0">Sistem SPMB Online Terintegrasi</p>
+>>>>>>> a3ab97a (perbaikan halaman awal)
         </div>
       </div>
     </footer>
