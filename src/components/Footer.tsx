@@ -19,7 +19,7 @@ export default function Footer() {
                 </div>
               )}
               <span className="font-bold text-xl tracking-tight text-white">
-                {settings?.namaSekolah || 'SDN 008 PKL KERINCI'}
+                {settings?.namaSekolah || 'SDN 010 PKL KERINCI'}
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
@@ -49,23 +49,15 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-500 shrink-0" />
-<<<<<<< HEAD
-                <span>{settings?.email || 'info@sdn008pklkerinci.sch.id'}</span>
-=======
-                <span>{settings?.email || 'admin@sdn008pkc.sch.id'}</span>
->>>>>>> a3ab97a (perbaikan halaman awal)
+                <span>{settings?.email || 'info@sdpkc.sch.id'}</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-slate-800 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} {settings?.namaSekolah || 'SDN 008 PKL KERINCI'}. Hak Cipta Dilindungi.</p>
-<<<<<<< HEAD
-          <p className="mt-2 md:mt-0">Sistem PMB Online Terintegrasi</p>
-=======
+          <p>&copy; {new Date().getFullYear()} {settings?.namaSekolah || 'SDN 010 PKL KERINCI'}. Hak Cipta Dilindungi.</p>
           <p className="mt-2 md:mt-0">Sistem SPMB Online Terintegrasi</p>
->>>>>>> a3ab97a (perbaikan halaman awal)
         </div>
       </div>
     </footer>

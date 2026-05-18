@@ -34,7 +34,7 @@ function LocationMarker({ onLocationSelect, initialLocation }: MapPickerProps) {
 }
 
 export default function MapPicker({ onLocationSelect, initialLocation }: MapPickerProps) {
-  const defaultCenter = initialLocation || { lat: 0.366414, lng: 101.858148 };
+  const defaultCenter = initialLocation || { lat: 0.417124, lng: 101.853084 };
   const [center, setCenter] = useState<{lat: number, lng: number}>(defaultCenter);
   const [mapKey, setMapKey] = useState(0); // To force re-render MapContainer when center changes drastically
 
@@ -69,22 +69,32 @@ export default function MapPicker({ onLocationSelect, initialLocation }: MapPick
       </button>
       <div className="h-[300px] w-full rounded-lg overflow-hidden border border-slate-300 z-0 relative">
       <MapContainer 
-          key={mapKey} 
-          center={[center.lat, center.lng]} 
-          zoom={15} 
-          scrollWheelZoom={false} 
-          className="h-full w-full z-0"
-        >
-          <TileLayer
-            attribution='&copy; Esri & OpenStreetMap contributors'
-            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-          />
+  key={mapKey} 
+  center={[center.lat, center.lng]} 
+  zoom={15} 
+  scrollWheelZoom={false} 
+  className="h-full w-full z-0"
+>
 
-          <LocationMarker
-            onLocationSelect={onLocationSelect}
-            initialLocation={center}
-          />
-        </MapContainer>
+  {/* SATELLITE */}
+  <TileLayer
+    attribution='&copy; Esri'
+    url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+  />
+
+  {/* LABEL JALAN */}
+  <TileLayer
+    attribution='&copy; OpenStreetMap contributors'
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    opacity={0.35}
+  />
+
+  <LocationMarker
+    onLocationSelect={onLocationSelect}
+    initialLocation={center}
+  />
+
+</MapContainer>
       </div>
     </div>
   );
